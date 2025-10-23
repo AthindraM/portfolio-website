@@ -1,0 +1,292 @@
+/* CSS RESET - Removes default browser styling for consistency */
+* {
+  margin: 0;
+  /* Removes default margins */
+  padding: 0;
+  /* Removes default padding */
+  box-sizing: border-box;
+  /* Makes width/height include padding and border */
+}
+
+/* BODY STYLING - Affects the entire page */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Modern, clean system fonts */
+  line-height: 1.6;
+  /* Space between lines of text (1.6 = 160% of font size) */
+  color: #333;
+  /* Dark gray text color (easier on eyes than pure black) */
+  background-color: #ffffff;
+  /* White background */
+}
+
+/* NAVIGATION BAR - The menu at the top */
+nav {
+  position: fixed;
+  /* Keeps nav at top even when scrolling */
+  top: 0;
+  /* Positions it at the very top */
+  width: 100%;
+  /* Full width of screen */
+  background-color: #ffffff;
+  /* White background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow below nav */
+  z-index: 1000;
+  /* Ensures nav stays above other elements */
+  padding: 1rem 0;
+  /* Vertical padding (1rem = 16px typically) */
+}
+
+/* Navigation links container */
+nav ul {
+  list-style: none;
+  /* Removes bullet points */
+  display: flex;
+  /* Makes items line up horizontally */
+  justify-content: center;
+  /* Centers items horizontally */
+  gap: 2rem;
+  /* Space between menu items */
+}
+
+/* Individual navigation links */
+nav a {
+  text-decoration: none;
+  /* Removes underline */
+  color: #333;
+  /* Dark gray text */
+  font-weight: 500;
+  /* Medium font weight */
+  transition: color 0.3s ease;
+  /* Smooth color change on hover (0.3 seconds) */
+}
+
+/* Navigation link hover effect */
+nav a:hover {
+  color: #666;
+  /* Lighter gray when hovering */
+}
+
+/* SECTION STYLING - Each page section (Home, About, etc.) */
+section {
+  min-height: 100vh;
+  /* Minimum height = full viewport height */
+  display: flex;
+  /* Enables flexbox layout */
+  flex-direction: column;
+  /* Stacks items vertically */
+  justify-content: center;
+  /* Centers content vertically */
+  align-items: center;
+  /* Centers content horizontally */
+  padding: 6rem 2rem 2rem;
+  /* Top, horizontal, bottom padding */
+  text-align: center;
+  /* Centers text */
+}
+
+/* Alternating background colors for visual separation */
+section:nth-child(even) {
+  background-color: #f8f9fa;
+  /* Light gray for even sections */
+}
+
+/* CONTAINER - Limits content width for readability */
+.container {
+  max-width: 800px;
+  /* Maximum width of content */
+  width: 100%;
+  /* Takes full width up to max-width */
+}
+
+/* HEADING STYLES */
+h1 {
+  font-size: 3rem;
+  /* 48px - Large main heading */
+  margin-bottom: 1rem;
+  /* Space below heading */
+  font-weight: 700;
+  /* Bold */
+}
+
+h2 {
+  font-size: 2rem;
+  /* 32px - Section headings */
+  margin-bottom: 2rem;
+  /* More space below for separation */
+  font-weight: 600;
+  /* Semi-bold */
+}
+
+/* PARAGRAPH STYLING */
+p {
+  font-size: 1.1rem;
+  /* Slightly larger than default (17.6px) */
+  margin-bottom: 1rem;
+  /* Space below paragraphs */
+  line-height: 1.8;
+  /* Extra line spacing for readability */
+}
+
+/* SUBTITLE TEXT - For taglines */
+.subtitle {
+  font-size: 1.3rem;
+  /* Larger than body text */
+  color: #666;
+  /* Medium gray */
+  margin-bottom: 2rem;
+  /* Space below */
+}
+
+/* PROJECT GRID - Container for project cards */
+.projects-grid {
+  display: grid;
+  /* CSS Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Responsive columns */
+  /* auto-fit: creates as many columns as fit */
+  /* minmax(250px, 1fr): each column is at least 250px, max takes equal space */
+  gap: 2rem;
+  /* Space between grid items */
+  margin-top: 2rem;
+  /* Space above grid */
+}
+
+/* PROJECT CARD - Individual project container */
+.project-card {
+  background: white;
+  /* White background */
+  padding: 2rem;
+  /* Internal spacing */
+  border-radius: 8px;
+  /* Rounded corners (8px radius) */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  transition: transform 0.3s ease;
+  /* Smooth movement on hover */
+}
+
+/* Project card hover effect */
+.project-card:hover {
+  transform: translateY(-5px);
+  /* Moves card up 5px on hover */
+}
+
+.project-card h3 {
+  margin-bottom: 1rem;
+  /* Space below project title */
+  color: #333;
+  /* Dark gray */
+}
+
+/* BUTTON STYLING */
+.btn {
+  display: inline-block;
+  /* Allows padding/margin like block, stays inline */
+  padding: 0.8rem 2rem;
+  /* Vertical and horizontal padding */
+  background-color: #333;
+  /* Dark background */
+  color: white;
+  /* White text */
+  text-decoration: none;
+  /* Removes underline */
+  border-radius: 5px;
+  /* Rounded corners */
+  margin-top: 1rem;
+  /* Space above button */
+  transition: background-color 0.3s ease;
+  /* Smooth color change */
+  border: none;
+  /* Removes default button border */
+  cursor: pointer;
+  /* Changes cursor to pointer on hover */
+  font-size: 1rem;
+  /* Standard text size */
+}
+
+.btn:hover {
+  background-color: #555;
+  /* Lighter on hover */
+}
+
+/* CONTACT FORM STYLING */
+form {
+  display: flex;
+  /* Flexbox layout */
+  flex-direction: column;
+  /* Stack inputs vertically */
+  gap: 1rem;
+  /* Space between form elements */
+  max-width: 500px;
+  /* Limits form width */
+  width: 100%;
+  /* Takes full width up to max */
+  margin: 0 auto;
+  /* Centers the form */
+}
+
+/* INPUT AND TEXTAREA STYLING */
+input,
+textarea {
+  padding: 0.8rem;
+  /* Internal spacing */
+  border: 1px solid #ddd;
+  /* Light gray border */
+  border-radius: 5px;
+  /* Rounded corners */
+  font-size: 1rem;
+  /* Standard font size */
+  font-family: inherit;
+  /* Uses same font as body */
+}
+
+textarea {
+  min-height: 150px;
+  /* Minimum height for message box */
+  resize: vertical;
+  /* Allows vertical resizing only */
+}
+
+/* RESUME SECTION STYLING */
+.resume-section {
+  text-align: left;
+  /* Left-align resume text for readability */
+  margin-bottom: 2rem;
+  /* Space below each section */
+}
+
+.resume-section h3 {
+  margin-bottom: 0.5rem;
+  /* Space below subheading */
+  color: #333;
+  /* Dark gray */
+}
+
+/* RESPONSIVE DESIGN - Adjusts for smaller screens */
+@media (max-width: 768px) {
+
+  /* 768px is typical tablet breakpoint */
+  h1 {
+    font-size: 2rem;
+    /* Smaller heading on mobile (32px) */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    /* Smaller section headings (24px) */
+  }
+
+  nav ul {
+    gap: 1rem;
+    /* Less space between nav items */
+    flex-wrap: wrap;
+    /* Allows wrapping to multiple lines if needed */
+  }
+
+  section {
+    padding: 5rem 1rem 1rem;
+    /* Less horizontal padding on mobile */
+  }
+}

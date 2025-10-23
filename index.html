@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags provide information about your webpage -->
+  <meta charset="UTF-8"> <!-- Defines character encoding (UTF-8 supports all languages) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site responsive on mobile -->
+  <title>Athindra Mitra - Portfolio</title> <!-- Text that appears in browser tab -->
+
+  <!-- LINK TO EXTERNAL CSS FILE -->
+  <!-- href="styles.css" tells the browser where to find your CSS file -->
+  <!-- rel="stylesheet" tells browser this is a CSS stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <ul>
+      <!-- Each link has href="#section-id" which scrolls to that section -->
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section id="home">
+    <div class="container">
+      <h1>Athindra Mitra</h1> <!-- Replace with your actual name -->
+      <p class="subtitle">University of Florida '29 | Mechanical Engineering | Destiny 2 Lover</p>
+      <!-- Your tagline -->
+      <p>Welcome to my portfolio!</p>
+      <a href="#projects" class="btn">View My Work</a> <!-- Button links to projects -->
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hi! I'm Athindra, a Mechanical Engineering major at the University of Florida and aspiring game developer!</p>
+      <p>I'm also pursuing a minor in Linguistics and learning Japanese at the moment!</p>
+      <p>When I'm not coding, you can find me in Destiny 2 or in the top lane of League of Legends. I'm always eager to
+        learn new things and
+        take on exciting projects!</p>
+    </div>
+  </section>
+
+  <!-- RESUME SECTION -->
+  <section id="resume">
+    <div class="container">
+      <h2>Resume</h2>
+
+      <!-- Education subsection -->
+      <div class="resume-section">
+        <h3>Education</h3>
+        <p><strong>University of Florida</strong> - B.S. in Mechanical Engineering, Minor in Linguistics (2025 - 2029)
+        </p>
+        <!--  <p>Brief description of your studies, relevant coursework, or achievements.</p> -->
+      </div>
+
+      <!-- Experience subsection -->
+      <div class="resume-section">
+        <h3>Experience</h3>
+        <p><strong>Job Title</strong> - Company Name (Year - Year)</p>
+        <p>Description of your role, responsibilities, and accomplishments.</p>
+        <br> <!-- Line break for spacing -->
+        <p><strong>Job Title</strong> - Company Name (Year - Year)</p>
+        <p>Description of your role, responsibilities, and accomplishments.</p>
+      </div>
+
+      <!-- Skills subsection -->
+      <div class="resume-section">
+        <h3>Skills</h3>
+        <p>HTML, CSS, JavaScript, React, Git, Figma, Responsive Design, etc.</p>
+      </div>
+
+      <!-- Download button (you'll need to add your actual resume file) -->
+      <a href="your-resume.pdf" class="btn" download>Download Full Resume</a>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <!-- Projects grid container -->
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <div class="project-card">
+          <h3>Project Title 1</h3>
+          <p>Brief description of the project, technologies used, and what problems it solves.</p>
+          <a href="#" class="btn">View Project</a> <!-- Replace # with actual link -->
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card">
+          <h3>Project Title 2</h3>
+          <p>Brief description of the project, technologies used, and what problems it solves.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card">
+          <h3>Project Title 3</h3>
+          <p>Brief description of the project, technologies used, and what problems it solves.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <p>I'd love to hear from you! Whether you have a question or just want to say hi, feel free to reach out.</p>
+
+      <!-- Contact form -->
+      <form id="contact-form">
+        <!-- Name input -->
+        <input type="text" name="name" placeholder="Your Name" required>
+        <!-- required = form won't submit without this field -->
+
+        <!-- Email input -->
+        <input type="email" name="email" placeholder="Your Email" required>
+        <!-- type="email" validates email format -->
+
+        <!-- Message textarea -->
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- LINK TO EXTERNAL JAVASCRIPT FILE -->
+  <!-- src="script.js" tells browser where to find your JavaScript file -->
+  <!-- This goes at the bottom so HTML loads before JavaScript runs -->
+  <script src="script.js"></script>
+</body>
+
+</html>
