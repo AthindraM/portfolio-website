@@ -2,110 +2,494 @@
 <html lang="en">
 
 <head>
-  <!-- Meta tags provide information about your webpage -->
-  <meta charset="UTF-8"> <!-- Defines character encoding (UTF-8 supports all languages) -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site responsive on mobile -->
-  <title>Athindra Mitra - Portfolio</title> <!-- Text that appears in browser tab -->
-
-  <!-- LINK TO EXTERNAL CSS FILE -->
-  <!-- href="styles.css" tells the browser where to find your CSS file -->
-  <!-- rel="stylesheet" tells browser this is a CSS stylesheet -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Software Engineer</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- NAVIGATION BAR -->
+  <!-- Animated background particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- NAVIGATION BAR with glowing effect -->
   <nav>
-    <ul>
-      <!-- Each link has href="#section-id" which scrolls to that section -->
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <div class="logo">&lt;/&gt; YOUR_NAME</div>
+      <ul>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- HOME SECTION -->
-  <section id="home">
+  <!-- HOME SECTION with terminal-style intro -->
+  <section id="home" class="hero">
     <div class="container">
-      <h1>Athindra Mitra</h1> <!-- Replace with your actual name -->
-      <p class="subtitle">University of Florida '29 | Mechanical Engineering | Destiny 2 Lover</p>
-      <!-- Your tagline -->
-      <p>Welcome to my portfolio!</p>
-      <a href="#projects" class="btn">View My Work</a> <!-- Button links to projects -->
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-button red"></span>
+          <span class="terminal-button yellow"></span>
+          <span class="terminal-button green"></span>
+          <span class="terminal-title">user@portfolio:~$</span>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-text">
+            <span class="command">$ whoami</span><br>
+            <span class="output">Your Name</span><br><br>
+            <span class="command">$ cat about.txt</span><br>
+            <span class="output">Software Engineer | Full-Stack Developer | System Architect</span><br><br>
+            <span class="command">$ ls skills/</span><br>
+            <span class="output">JavaScript Python Java C++ React Node.js Docker AWS</span><br><br>
+            <span class="command">$ echo $STATUS</span><br>
+            <span class="output glow">Available for opportunities</span><br>
+            <span class="cursor">_</span>
+          </p>
+        </div>
+      </div>
+      <div class="cta-buttons">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
     </div>
   </section>
 
   <!-- ABOUT SECTION -->
   <section id="about">
     <div class="container">
-      <h2>About Me</h2>
-      <p>Hi! I'm Athindra, a Mechanical Engineering major at the University of Florida and aspiring game developer!</p>
-      <p>I'm also pursuing a minor in Linguistics and learning Japanese at the moment!</p>
-      <p>When I'm not coding, you can find me in Destiny 2 or in the top lane of League of Legends. I'm always eager to
-        learn new things and
-        take on exciting projects!</p>
+      <h2 class="section-title"><span class="bracket">[</span> About Me <span class="bracket">]</span></h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="lead">Hello! I'm a software engineer passionate about building elegant solutions to complex
+            problems.</p>
+          <p>With a background in full-stack development and a keen interest in emerging technologies, I specialize in
+            creating scalable, efficient applications that push the boundaries of what's possible.</p>
+          <p>When I'm not coding, you can find me exploring new frameworks, contributing to open-source projects, or
+            diving into the latest sci-fi novels and games like Destiny 2 and League of Legends.</p>
+          <p>Currently pursuing my B.S. in Mechanical Engineering with a Minor in Linguistics at the University of
+            Florida, I bring a unique interdisciplinary perspective to software development.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number" data-target="50">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label">Technologies Mastered</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="1000">0</div>
+            <div class="stat-label">Commits This Year</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="99">0</div>
+            <div class="stat-label">Coffee Consumed</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- RESUME SECTION -->
-  <section id="resume">
+  <!-- SKILLS SECTION with progress bars -->
+  <section id="skills">
     <div class="container">
-      <h2>Resume</h2>
+      <h2 class="section-title"><span class="bracket">[</span> Technical Arsenal <span class="bracket">]</span></h2>
 
-      <!-- Education subsection -->
-      <div class="resume-section">
-        <h3>Education</h3>
-        <p><strong>University of Florida</strong> - B.S. in Mechanical Engineering, Minor in Linguistics (2025 - 2029)
-        </p>
-        <!--  <p>Brief description of your studies, relevant coursework, or achievements.</p> -->
+      <div class="skills-category">
+        <h3 class="category-title">// Languages</h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>JavaScript</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="90"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Python</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Java</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>C++</span>
+              <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>TypeScript</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>SQL</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="80"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Experience subsection -->
-      <div class="resume-section">
-        <h3>Experience</h3>
-        <p><strong>Coding Tutor/Camp Counselor</strong> - Code Ninjas (May 2025 - August 2025)</p>
-        <p>Description of your role, responsibilities, and accomplishments.</p>
+      <div class="skills-category">
+        <h3 class="category-title">// Frontend Technologies</h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>React</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="90"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Vue.js</span>
+              <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>HTML/CSS</span>
+              <span class="skill-percent">95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="95"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Tailwind CSS</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Skills subsection -->
-      <div class="resume-section">
-        <h3>Skills</h3>
-        <p>Python, C++, Java, Vim/Neovim, Git, HTML, CSS, JavaScript.</p>
+      <div class="skills-category">
+        <h3 class="category-title">// Backend & DevOps</h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Node.js</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Express</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Docker</span>
+              <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>AWS</span>
+              <span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="70"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>MongoDB</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Git</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="90"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE/RESUME SECTION -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title"><span class="bracket">[</span> Experience Log <span class="bracket">]</span></h2>
+
+      <!-- Timeline -->
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025 - 2029</div>
+            <h3>University of Florida</h3>
+            <h4>B.S. Mechanical Engineering | Minor in Linguistics</h4>
+            <p>Focusing on computational design, robotics, and the intersection of engineering and language processing.
+              Active in the Engineering Student Council and Hack Club.</p>
+            <div class="tags">
+              <span class="tag">Engineering</span>
+              <span class="tag">Linguistics</span>
+              <span class="tag">Research</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Summer 2024</div>
+            <h3>Software Engineering Intern</h3>
+            <h4>Tech Company Name</h4>
+            <p>Developed full-stack web applications using React and Node.js. Implemented RESTful APIs and optimized
+              database queries, improving response time by 40%. Collaborated with cross-functional teams in an Agile
+              environment.</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Agile</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2023 - 2024</div>
+            <h3>Freelance Developer</h3>
+            <h4>Self-Employed</h4>
+            <p>Built custom websites and web applications for local businesses and startups. Managed projects from
+              conception to deployment, handling client communications, design, development, and maintenance.</p>
+            <div class="tags">
+              <span class="tag">Full-Stack</span>
+              <span class="tag">Client Relations</span>
+              <span class="tag">Project Management</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2022 - Present</div>
+            <h3>Open Source Contributor</h3>
+            <h4>Various Projects</h4>
+            <p>Active contributor to several open-source projects on GitHub. Specialized in bug fixes, feature
+              implementations, and documentation improvements for JavaScript and Python libraries.</p>
+            <div class="tags">
+              <span class="tag">Open Source</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Community</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Download button (you'll need to add your actual resume file) -->
-      <a href="AMitra_Resume_Aug2025.pdf" class="btn" download>Download Full Resume</a>
+      <!-- Download Resume Button -->
+      <div class="text-center" style="margin-top: 3rem;">
+        <a href="your-resume.pdf" class="btn btn-primary" download>
+          <span>Download Full Resume</span>
+          <span class="btn-icon">→</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS SECTION -->
   <section id="projects">
     <div class="container">
-      <h2>Projects</h2>
+      <h2 class="section-title"><span class="bracket">[</span> Featured Projects <span class="bracket">]</span></h2>
 
-      <!-- Projects grid container -->
       <div class="projects-grid">
-        <!-- Project Card 1 -->
+        <!-- Project 1 -->
         <div class="project-card">
-          <h3>Project Title 1</h3>
-          <p>Brief description of the project, technologies used, and what problems it solves.</p>
-          <a href="#" class="btn">View Project</a> <!-- Replace # with actual link -->
+          <div class="project-image">
+            <div class="project-overlay">
+              <span class="project-status">Live</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Neural Network Visualizer</h3>
+            <p>Interactive web application for visualizing and training neural networks in real-time. Built with React
+              and TensorFlow.js, featuring custom architecture design and live training metrics.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">TensorFlow.js</span>
+              <span class="tag">D3.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-small">View Live</a>
+              <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+            </div>
+          </div>
         </div>
 
-        <!-- Project Card 2 -->
+        <!-- Project 2 -->
         <div class="project-card">
-          <h3>Project Title 2</h3>
-          <p>Brief description of the project, technologies used, and what problems it solves.</p>
-          <a href="#" class="btn">View Project</a>
+          <div class="project-image">
+            <div class="project-overlay">
+              <span class="project-status">Live</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Real-Time Collaboration Platform</h3>
+            <p>Full-stack collaborative coding platform with real-time synchronization using WebSockets. Features
+              include live code editing, video chat, and integrated terminal.</p>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Socket.io</span>
+              <span class="tag">WebRTC</span>
+              <span class="tag">Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-small">View Live</a>
+              <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+            </div>
+          </div>
         </div>
 
-        <!-- Project Card 3 -->
+        <!-- Project 3 -->
         <div class="project-card">
-          <h3>Project Title 3</h3>
-          <p>Brief description of the project, technologies used, and what problems it solves.</p>
-          <a href="#" class="btn">View Project</a>
+          <div class="project-image">
+            <div class="project-overlay">
+              <span class="project-status">Open Source</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>CLI Task Manager</h3>
+            <p>Powerful command-line task management tool with cloud synchronization. Features natural language
+              processing for task creation and smart reminders.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+              <span class="tag">AWS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-small">Documentation</a>
+              <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <span class="project-status">In Progress</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Distributed File System</h3>
+            <p>Building a fault-tolerant distributed file system with automatic replication and load balancing.
+              Implements custom consensus algorithm for data consistency.</p>
+            <div class="project-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Distributed Systems</span>
+              <span class="tag">Networking</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <span class="project-status">Live</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>E-Commerce Platform</h3>
+            <p>Modern e-commerce solution with serverless architecture. Features include payment processing, inventory
+              management, and analytics dashboard.</p>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Stripe</span>
+              <span class="tag">AWS Lambda</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-small">View Live</a>
+              <a href="#" class="btn btn-small btn-secondary">Case Study</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <span class="project-status">Open Source</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>API Rate Limiter Library</h3>
+            <p>Lightweight, flexible rate limiting middleware for Express.js applications. Supports multiple algorithms
+              and distributed Redis caching.</p>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Redis</span>
+              <span class="tag">NPM</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-small">NPM Package</a>
+              <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -114,33 +498,73 @@
   <!-- CONTACT SECTION -->
   <section id="contact">
     <div class="container">
-      <h2>Get In Touch</h2>
-      <p>I'd love to hear from you! Whether you have a question or just want to say hi, feel free to reach out!</p>
-      <p>NOTE: As of right now, the contact form isn't fully set up yet. Instead, please email me at
-        athindra.nm4@gmail.com</p>
+      <h2 class="section-title"><span class="bracket">[</span> Initialize Contact <span class="bracket">]</span></h2>
 
-      <!-- Contact form -->
-      <form id="contact-form">
-        <!-- Name input -->
-        <input type="text" name="name" placeholder="Your Name" required>
-        <!-- required = form won't submit without this field -->
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Let's Build Something Amazing</h3>
+          <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just
+            want to say hi, feel free to reach out!</p>
 
-        <!-- Email input -->
-        <input type="email" name="email" placeholder="Your Email" required>
-        <!-- type="email" validates email format -->
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:your.email@example.com">your.email@example.com</a>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-icon">💼</div>
+              <div>
+                <h4>LinkedIn</h4>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-icon">💻</div>
+              <div>
+                <h4>GitHub</h4>
+                <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <!-- Message textarea -->
-        <textarea name="message" placeholder="Your Message" required></textarea>
-
-        <!-- Submit button -->
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span>
+            <span class="btn-icon">→</span>
+          </button>
+        </form>
+      </div>
     </div>
   </section>
 
-  <!-- LINK TO EXTERNAL JAVASCRIPT FILE -->
-  <!-- src="script.js" tells browser where to find your JavaScript file -->
-  <!-- This goes at the bottom so HTML loads before JavaScript runs -->
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+      <p class="footer-tagline">Built with <span class="glow">❤️</span> and lots of caffeine</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 
